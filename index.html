@@ -6,7 +6,7 @@
     <title>product-preview-card</title>
 </head>
 <style>
-    .main-product-img{
+    #main-product-img{
         height: 400px;
         width: 380px;
         object-fit: cover;
@@ -31,15 +31,42 @@
     }
 </style>
 <body>
-    <img src="img/img_1.jpg"  class="main-product-img"/>
+    <img src="img/img_1.jpg"  id="main-product-img"/>
 
     <div class="images-container">
-        <img src="img/img_1.jpg" class="product-img"/>
-        <img src="img/img_2.jpg" class="product-img"/>
-        <img src="img/img_3.jpg" class="product-img"/>
-        <img src="img/img_4.jpg" class="product-img"/>
-        <img src="img/img_5.jpg" class="product-img"/>
-        <img src="img/img_6.jpg" class="product-img"/>
+        <img src="img/img_1.jpg" class="product-img" onclick="ImageChange('1')"/>
+        <img src="img/img_2.jpg" class="product-img" onclick="ImageChange('2')"/>
+        <img src="img/img_3.jpg" class="product-img" onclick="ImageChange('3')"/>
+        <img src="img/img_4.jpg" class="product-img" onclick="ImageChange('4')"/>
+        <img src="img/img_5.jpg" class="product-img" onclick="ImageChange('5')"/>
+        <img src="img/img_6.jpg" class="product-img" onclick="ImageChange('6')"/>
     </div>
+
+
+    <script>
+        function ImageChange(num){
+            const defaultImage = document.getElementById('main-product-img');
+
+            if(num == 1){
+                defaultImage.src = "img/img_1.jpg";
+            }
+            else if(num == 2){
+                defaultImage.src = "img/img_2.jpg";
+            }
+            else if(num == 3){
+                defaultImage.src = "img/img_3.jpg";
+            }
+            else if(num == 4){
+                defaultImage.src = "img/img_4.jpg";
+            }
+            else if(num == 5){
+                defaultImage.src = "img/img_5.jpg";
+            }
+            else if(num == 6){
+                defaultImage.src = "img/img_6.jpg";
+            }
+
+        }
+    </script>
 </body>
 </html>
